@@ -1,6 +1,6 @@
 # Operating Systems Laboratory
 
-A comprehensive collection of simulations and implementations for core Operating Systems concepts, focusing on CPU Scheduling, Process Synchronization, and Deadlock management.
+A comprehensive collection of simulations and implementations for core Operating Systems concepts, focusing on CPU Scheduling, Process Synchronization, Deadlock management, and Memory Management.
 
 ## Project Information
 - **Author:** Nguyễn Công Khoa
@@ -40,6 +40,26 @@ Algorithms for managing system resources and avoiding circular waits.
 
 - **Banker's Algorithm:** Used for deadlock avoidance by simulating resource allocation safety.
 - **Deadlock Detection Algorithm:** Identifies the presence of a deadlock cycle in the system.
+
+### 4. Memory Management
+Located in: `Lab-for-Memory-Management/`
+Simulate Memory Management technologies in operating systems.
+
+#### Contiguous Memory Allocation in Main Memory
+Algorithms for allocating contiguous blocks of memory to processes:
+
+- **First Fit:** Allocates the first memory hole that is large enough for the process.
+- **Best Fit:** Allocates the smallest hole that is large enough, minimizing leftover space.
+- **Worst Fit:** Allocates the largest available hole, leaving the most leftover space.
+
+#### Page Replacement in Virtual Memory
+Algorithms for managing page frames when a page fault occurs:
+
+- **FIFO (First-In, First-Out):** Replaces the oldest page in memory.
+- **Optimal:** Replaces the page that will not be used for the longest time in the future.
+- **LRU (Least Recently Used):** Replaces the page that has not been used for the longest period.
+- **Counting LFU (Least Frequently Used):** Replaces the page with the lowest usage count.
+- **Counting MFU (Most Frequently Used):** Replaces the page with the highest usage count.
 
 ---
 
