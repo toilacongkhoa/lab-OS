@@ -6,7 +6,7 @@ int main() {
     // b: lưu kích thước các block bộ nhớ
     // f: lưu kích thước các process 
     // bf: đánh dấu block đã dùng (1) hay chưa (0)
-    // ff: lưu kết quả cấp phát, ff[i] = j nghĩa là process i được cấp block j, = 0 nghĩa là chưa được cấp
+    // ff: lưu kết quả cấp phát, ff[i] = j nghĩa là -> process i được cấp block j, = 0 nghĩa là chưa được cấp
     // frag: lưu phần nhớ dư sau khi cấp phát
     int nb, nf, i, j, temp;
     int lowest = 10000;
@@ -82,11 +82,24 @@ int main() {
     return 0;
 }
 // Nhap so luong khoi nho (blocks): 5
-// Nhap so luong tien trinh (processes): 1
+// Nhap so luong tien trinh (processes): 4
 
 // Nhap kich thuoc tung khoi nho:
-//   Process 1: 212
+//   Block 1: 100
+//   Block 2: 500
+//   Block 3: 200
+//   Block 4: 300
+//   Block 5: 150
 
-// Process No   Process Size    Block No     Block Size   Fragment      
+// Nhap kich thuoc tung tien trinh:
+//   Process 1: 212
+//   Process 2: 417
+//   Process 3: 112
+//   Process 4: 426
+
+// Process No   Process Size    Block No     Block Size   Fragment
 // ------------------------------------------------------------
 // 1            212             4            300          88
+// 2            417             2            500          83
+// 3            112             5            150          38
+// 4            426             N/A          N/A          Khong du bo nho

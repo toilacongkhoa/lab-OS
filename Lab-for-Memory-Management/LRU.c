@@ -9,7 +9,8 @@ int main() {
     // rs: lưu chuỗi trang tham chiếu
     // frames: các frame trong RAM
     // n: số lượng frame
-    // lastUsed[j] = thời điểm gần nhất mà trang đang nằm ở frame j được sử dụng
+    // lastUsed[j]: mảng lưu thời điểm gần nhất mà trang đang ở frame j được dùng
+    // lastUsed = [0, 1, 2] → Frame 0 nhỏ nhất → trang ở frame 0 bị đuổi
 
     printf("\n--- LRU Page Replacement Algorithm ---\n");
 
@@ -94,13 +95,13 @@ int main() {
 // Nhap so luong frames: 3
 
 // Trang 7: Fault
-//   Frames: [7] [ ] [ ]
+//   Frames: [7] [ ] [ ] 
 
 // Trang 0: Fault
-//   Frames: [7] [0] [ ]
+//   Frames: [7] [0] [ ] 
 
 // Trang 1: Fault
-//   Frames: [7] [0] [1]
+//   Frames: [7] [0] [1] 
 
 // Trang 2: (Thay trang 7) Fault
 //   Frames: [2] [0] [1]

@@ -61,7 +61,7 @@ int main() {
         }
 
         // Page Fault: can nap trang moi
-        k++;
+        k++; // tăng số lần page fault
 
         // Kiem tra con frame trong
         found = 0;
@@ -152,7 +152,7 @@ int main() {
 //   Frames: [2] [4] [3]
 
 // Trang 3: da co trong bo nho (Hit)
-//   Frames: [2] [4] [3] 
+//   Frames: [2] [4] [3]
 
 // Trang 0: Thay trang 4 bang trang 0
 //   Frames: [2] [0] [3]   << Page Fault >>
