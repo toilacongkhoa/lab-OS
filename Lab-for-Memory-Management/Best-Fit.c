@@ -9,7 +9,7 @@ int main() {
     // ff: lưu kết quả cấp phát, ff[i] = j nghĩa là -> process i được cấp block j, = 0 nghĩa là chưa được cấp
     // frag: lưu phần nhớ dư sau khi cấp phát
     int nb, nf, i, j, temp;
-    int lowest = 10000;
+    int lowest = 999999;
     // nb: số lượng block
     // nf: số lượng process
 
@@ -42,7 +42,7 @@ int main() {
     // Thuat toan Best Fit
     for (i = 1; i <= nf; i++) {
         ff[i] = 0;       // Chua duoc cap phat
-        lowest = 10000;  // Reset gia tri nho nhat
+        lowest = 999999;  // Reset gia tri nho nhat
 
         for (j = 1; j <= nb; j++) {
             if (bf[j] != 1) {           // Neu block chua duoc dung
@@ -61,7 +61,7 @@ int main() {
             frag[i] = lowest;
             bf[ff[i]] = 1;   // Danh dau block da duoc dung
         }
-        lowest = 10000;      // Reset cho process tiep theo
+        lowest = 999999;      // Reset cho process tiep theo
     }
 
     // In ket qua
